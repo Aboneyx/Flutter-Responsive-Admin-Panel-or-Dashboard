@@ -1,15 +1,17 @@
 import 'package:admin/constants.dart';
-import 'package:admin/controllers/MenuController.dart';
+import 'package:admin/controllers/menu_controller.dart';
 import 'package:admin/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
             create: (context) => MenuController(),
           ),
         ],
-        child: MainScreen(),
+        child: const MainScreen(),
       ),
     );
   }
